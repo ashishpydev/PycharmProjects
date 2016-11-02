@@ -19,7 +19,7 @@ with open("/Users/ashishagrawal/PycharmProjects/learnPython/book", 'w') as f:
 	f.write(s)
 	f.close()
 
-with open ("/Users/ashishagrawal/PycharmProjects/learnPython/book", 'r') as f:
+with open("/Users/ashishagrawal/PycharmProjects/learnPython/book", 'r') as f:
 	s = f.read()
 	s = json.loads(s)
 	print(s)

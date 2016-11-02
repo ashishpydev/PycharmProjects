@@ -18,21 +18,20 @@ String  = BANANA
 Kevin's vowel beginning word = ANA
 Here, ANA occurs twice in BANANA. Hence, Kevin will get 2 Points.
 """
-s = input()
+s = raw_input()
 s = s.upper()
 vowels = "AEIOU"
 k_score = 0
 s_score = 0
 
-if 0 < len(s) < math.pow(10, 6):
-    for i in range(len(s)):
-        if s[i] in vowels:
-            k_score += (len(s) - i)
-        else:
-            s_score += (len(s) - i)
-    if k_score > s_score:
-        print("Kevin {}".format(k_score))
-    elif s_score > k_score:
-        print("Stuart {}".format(s_score))
+for i in range(len(s)):
+    if s[i] in vowels:
+        k_score += (len(s) - i)
     else:
-        print("Draw")
+        s_score += (len(s) - i)
+if k_score > s_score:
+    print("Kevin {}".format(k_score))
+elif s_score > k_score:
+    print("Stuart {}".format(s_score))
+else:
+    print("Draw")

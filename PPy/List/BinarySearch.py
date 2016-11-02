@@ -21,20 +21,19 @@ def binary_search(target, nums):
         guess_value = nums[guess_index]
 
         if guess_value == target:
-            print True
-
-        if guess_value > target:
-
-            # target is to the left
+			print(True)
+			break
+		if guess_value > target:
+			# target is to the left
             # so move ceiling to the left
             ceiling_index = guess_index
-
-        else:
-
-            # target is to the right
+		else:
+			# target is to the right
             # so move floor to the right
             floor_index = guess_index
-print False
+	print(False)
+
 
 nums = [21, 24, 30, 34, 39, 54, 67, 76, 84, 98]
-binary_search(30, nums)
+nums.sort()
+binary_search(39, nums)

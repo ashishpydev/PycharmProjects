@@ -1,16 +1,16 @@
 class Node:
-  def __init__(self, data):
-    self.data = data
-    self.next = None
+	def __init__ (self, data):
+		self.data = data
+		self.next = None
 
 
 class LinkedList:
-	def __init__(self):
+	def __init__ (self):
 		self.head = None
 		self.tail = None
 	
 	def AddNode(self, data):
-		new_node = Node(data)
+		new_node = Node ( data )
 		
 		if self.head is None:
 			self.head = new_node
@@ -20,12 +20,12 @@ class LinkedList:
 		
 		self.tail = new_node
 	
-	def RemoveNode(self, index):
+	def RemoveNode (self, index):
 		prev = None
 		node = self.head
 		i = 0
 		
-		while(node is not None) and (i < index):
+		while (node is not None) and (i < index):
 			prev = node
 			node = node.next
 			i += 1
@@ -35,15 +35,16 @@ class LinkedList:
 		else:
 			prev.next = node.next
 	
-	def PrintList(self):
+	def PrintList (self):
 		node = self.head
 		while node is not None:
 			print node.data
 			node = node.next
-			
-List = LinkedList()
-List.AddNode(1)
-List.AddNode(2)
-List.AddNode(3)
-List.AddNode(4)
-List.PrintList()
+
+
+List = LinkedList ( )
+List.AddNode ( 1 )
+List.AddNode ( 2 )
+List.AddNode ( 3 )
+List.AddNode ( 4 )
+List.PrintList ( )

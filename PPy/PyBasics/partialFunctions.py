@@ -19,6 +19,7 @@ from functools import partial
 
 
 def sum(a, b, c):
+	print (a, b, c)
 	sum = a*100 + b*10 + c*10
 	print(sum)
 getsum = partial(sum, b=5, c=6)

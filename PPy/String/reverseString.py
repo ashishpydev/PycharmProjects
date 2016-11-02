@@ -4,8 +4,9 @@ def guess(secret):
 
 
 guess('abc dba')
-
-
+a = range(10)
+# a = [0::2]
+print(a[1::2])
 def reverse(str):
 	rlst = str.split(" ")
 	print(' '.join(rlst[::-1]))
